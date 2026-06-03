@@ -45,8 +45,16 @@ export default function HomeLabPage() {
     )
   }
 
+  function logout() {
+    localStorage.removeItem("token")
+    window.location.href = '/login'
+  }
+
   return (
     <div className="dashboard">
+        <button onClick={logout} className="logout-button">
+        Logout
+        </button>
       <h1 className="title">HomeLab Dashboard</h1>
 
       {/* GAUGES */}
