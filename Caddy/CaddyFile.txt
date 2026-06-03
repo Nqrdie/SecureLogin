@@ -1,0 +1,4 @@
+secureloginapp.ddns.net {
+    reverse_proxy /api/* localhost:5093
+    reverse_proxy localhost:3000
+}
